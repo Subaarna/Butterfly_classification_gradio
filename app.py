@@ -55,15 +55,15 @@ image_input = gr.Image(type="pil", label="Upload an image of a butterfly")
 label_output = gr.Label(num_top_classes=1, label="Predicted Butterfly Class")
 
 # Preuploaded images with labels
-# Preuploaded images with labels
+
 examples = [
     [Image.open("./1.jpg"), "Adonis"],
     [Image.open("./2.jpg"), "CHECQUERED SKIPPER"],
     [Image.open("./3.jpg"), "ORANGE TIP"],
-    # Add more preuploaded images with labels as needed
+    
 ]
 
 interface = gr.Interface(fn=predict_class, inputs=image_input, outputs=label_output, examples=examples)
 
-# Launch the Gradio interface
+# Launching the Gradio interface
 interface.launch(debug=True)
